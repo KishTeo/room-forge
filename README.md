@@ -9,10 +9,25 @@ No external dependencies. Unity 2021.3 LTS or newer, 2D URP.
 ## Install
 
 Drop the `Assets/RoomForge` folder into your project. That's it, it's
-self-contained — but one heads-up: the `DoorAnchor_N` / `_S` / `_E` / `_W`
-tags live in your project's Tag Manager, not inside the folder itself, so
-Unity won't know about them until you add those 4 tags by hand first
-(Project Settings → Tags and Layers), or it'll complain.
+self-contained, and the bundled `Space-room_*` example prefabs already have
+their `DoorAnchor_N`/`_S`/`_E`/`_W` tags baked in, so nothing extra to set up
+just to try it out.
+
+One thing worth knowing for later: RoomForge only ever *reads* these tags
+(`RoomDefinition.CollectDoorAnchors` checks `transform.tag`, never
+`CompareTag`/`FindGameObjectsWithTag`), and reading an object's tag doesn't
+care whether that tag is registered in your project — so it works even
+"unregistered." But the moment you build your *own* room prefabs and go to
+tag a new `DoorAnchor_*` child yourself, Unity's Tag dropdown won't let you
+type a new one in — you'll need those 4 tags added first (Project Settings →
+Tags and Layers → Add Tag).
+
+The `Space-room_*` prefabs (and the `Space.asset` config pointing at them)
+are just a working example, not part of the plugin proper — don't like the
+art, don't need a demo? Delete `Assets/RoomForge/Prefabs/Rooms/Space-room_*`,
+`Assets/RoomForge/Prefabs/Corridors/Space-Corridor.prefab`,
+`Assets/RoomForge/Sprites/Space/`, and `Assets/RoomForge/SO/Space.asset`
+without a second thought.
 
 ## Quick start (15 minutes, give or take)
 
