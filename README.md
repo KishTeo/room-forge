@@ -173,6 +173,17 @@ generator.OnRoomPlaced += room =>
 
 ## Gotchas / frequent problems
 
+**Room sprites are just... invisible in a fresh project** (no pink/magenta,
+nothing shows up at all). Check Project Settings → Graphics — specifically
+whether a **Scriptable Render Pipeline Asset** is actually assigned there,
+not just whether the URP package is installed. A project can have URP
+installed and still be rendering with the Built-in pipeline underneath if
+that field is empty (happens easily if the project wasn't created from a 2D
+URP template) — and URP-shader materials don't render under Built-in. If
+it's empty: Project window → right-click → **Create → Rendering → URP Asset
+(with 2D Renderer)**, then drag the new asset into that Graphics Settings
+field.
+
 **Some rooms are left with open doorways that never got blocked.**
 `RoomDefinition` only picks up direct children tagged
 `DoorAnchor_N/_S/_E/_W`. Missing an anchor on even one side means RoomForge
