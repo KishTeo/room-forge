@@ -78,3 +78,7 @@
 /Assets/RoomForge/Prefabs/Corridors/Corridor.prefab.meta
 /Assets/RoomForge/Prefabs/Corridors/Road.prefab
 /Assets/RoomForge/Prefabs/Corridors/Road.prefab.meta
+
+# Only Corridor.prefab (excluded above) used this — orphaned now that it's gone.
+/Assets/RoomForge/Sprites/CorridorFloor.png
+/Assets/RoomForge/Sprites/CorridorFloor.png.meta

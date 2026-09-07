@@ -214,15 +214,16 @@ no-op. Check the field is actually filled in the *open scene*, not just in
 the file on disk, and save — unsaved Inspector edits here drift from what's
 on disk more easily than you'd think.
 
-**The preview window throws up a "no valid layout found" warning.**
-Not a bug, just an honest report: on that preview seed, the layout failed
-the internal `Validator` check on every attempt (`maxGenerationAttempts`,
-10 by default). Doesn't matter in an actual game — runtime generation
-retries the exact same way, players never see it. If it keeps happening,
-that's a sign your settings (high `Branch Count`, `Compact` solver with a
-tight `Grid Cell Size`) are pushing close to what the overlap-resolution
-pass can handle — try Reroll, dial back branching, or switch to `Grid`
-(which can't overlap by construction, no best-effort involved).
+**The preview window throws up a warning that the layout "didn't pass
+validation even after retrying."** Not a bug, just an honest report: on that
+preview seed, the layout failed the internal `Validator` check on every
+attempt (`maxGenerationAttempts`, 10 by default). Doesn't matter in an
+actual game — runtime generation retries the exact same way, players never
+see it. If it keeps happening, that's a sign your settings (high `Branch
+Count`, `Compact` solver with a tight `Grid Cell Size`) are pushing close to
+what the overlap-resolution pass can handle — try Reroll, dial back
+branching, or switch to `Grid` (which can't overlap by construction, no
+best-effort involved).
 
 **Resized a room in the prefab, but `Auto-size from Prefabs` in the main
 window won't pick it up.** That button reads `RoomDefinition → Size` — a
@@ -311,11 +312,13 @@ Deliberate scope calls, not forgotten bugs:
 
 ```
 Assets/RoomForge/
-  Editor/       — the editor window (Window → RoomForge)
+  Editor/       — the editor window (Window → RoomForge) + custom inspectors/drawers
   Runtime/
     Core/       — DungeonGenerator, DungeonConfigSO, RoomDefinition, RoomInstance
     Generation/ — GraphBuilder, ILayoutSolver (Grid/Compact), RoomPlacer, Validator, BackgroundFiller
-  Prefabs/      — the Space room/corridor set (working example)
+  Prefabs/
+    DoorBlocker.prefab — generic door-blocker stub, not part of the example
+    Rooms/, Corridors/ — the Space room/corridor set (working example)
   SO/           — Space.asset, an example DungeonConfigSO
   Sprites/
     Space/      — sprites the Space example prefabs use
