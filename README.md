@@ -293,6 +293,7 @@ Assets/RoomForge/
   Prefabs/      — the Space room/corridor set (working example)
   SO/           — Space.asset, an example DungeonConfigSO
   Sprites/
+    Space/      — sprites the Space example prefabs use
 ```
 
 ## Performance
