@@ -10,10 +10,9 @@ No external dependencies. Unity 2021.3 LTS or newer, 2D URP.
 
 Drop the `Assets/RoomForge` folder into your project. That's it, it's
 self-contained — but one heads-up: the `DoorAnchor_N` / `_S` / `_E` / `_W`
-tags live in your project's Tag Manager, not inside the folder itself. If
-you're copy-pasting the folder into an existing project instead of cloning
-this whole repo, go add those 4 tags by hand first (Project Settings → Tags
-and Layers), or Unity will complain.
+tags live in your project's Tag Manager, not inside the folder itself, so
+Unity won't know about them until you add those 4 tags by hand first
+(Project Settings → Tags and Layers), or it'll complain.
 
 ## Quick start (15 minutes, give or take)
 

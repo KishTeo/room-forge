@@ -36,11 +36,23 @@
 /Assets/Example/
 /Assets/Example.meta
 
-# Dev test scene — wired to Sandbox/SPUM/Brackeys components above, would ship
-# with missing-script references once those are excluded. No shipped demo scene;
-# README documents the minimal setup instead.
-/Assets/Scenes/SampleScene.unity
-/Assets/Scenes/SampleScene.unity.meta
+# This repo ships the plugin only (Assets/RoomForge + docs), not a runnable
+# Unity project — installing it means copying that one folder into your own
+# project, same as any other third-party package. Everything below is
+# project-level scaffolding a plugin user has no use for: it stays on disk
+# locally (this working copy IS a full dev project) but was never meant to be
+# part of what gets published.
+/Assets/Scenes/
+/Assets/Scenes.meta
+/Assets/Settings/
+/Assets/Settings.meta
+/Assets/Space/
+/Assets/Space.meta
+/Packages/
+/ProjectSettings/
+/CLAUDE.md
+/.vsconfig
+/.gitignore.txt
 
 # RoomForge dev-only tests — not shipped to package users.
 /Assets/RoomForge/Tests/
