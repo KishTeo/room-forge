@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bae6aab0dd88cc489c1859d6a2163ef, type: 3}
+  m_Name: Space
+  m_EditorClassIdentifier: RoomForge.Runtime::RoomForge.DungeonConfigSO
+  rooms:
+  - type: 0
+    prefab: {fileID: 1947899258162217965, guid: 90caa997d4b633743a4c47ef8d3236f2, type: 3}
+    weight: 0
+    specialTag: 
+  - type: 1
+    prefab: {fileID: 6215009567577065391, guid: d0b4d4fa693d3024f8766f5cfbee1822, type: 3}
+    weight: 0
+    specialTag: 
+  - type: 2
+    prefab: {fileID: 2214331090224314005, guid: 838cca3f497e67d4c8e4386774119274, type: 3}
+    weight: 0
+    specialTag: 
+  - type: 2
+    prefab: {fileID: 1478221039326299487, guid: ba9de8cf369994e4faa7af31b831c5ec, type: 3}
+    weight: 0
+    specialTag: 
+  - type: 2
+    prefab: {fileID: 7899962648706220053, guid: 7f3f1ebef389c834bace7e8bcd8d5f7f, type: 3}
+    weight: 0
+    specialTag: 
+  - type: 3
+    prefab: {fileID: 8582897291590699556, guid: 3331fe8f38accd3469a69645c581eb60, type: 3}
+    weight: 0
+    specialTag: 
+  - type: 3
+    prefab: {fileID: 6497276585556334514, guid: 55c7ffd59980b644fa59241ceb494217, type: 3}
+    weight: 0
+    specialTag: 
+  connections:
+  - from: 0
+    to: 2
+  - from: 2
+    to: 2
+  branchRules:
+  - type: 0
+    branchCountMin: 0
+    branchCountMax: 0
+    deadEndTag: 
+  - type: 2
+    branchCountMin: 0
+    branchCountMax: 1
+    deadEndTag: 
+  - type: 3
+    branchCountMin: 0
+    branchCountMax: 0
+    deadEndTag: 
+  corridorPrefab: {fileID: 3206229027650230881, guid: afe7588a5756468458f6b66e8f0bb1b7, type: 3}
+  doorBlockerPrefab: {fileID: 1100000000000001, guid: 5b5e69f1ce844686aa65769bcc0e37a6, type: 3}
+  layoutSolverType: 0
+  minRoomCount: 5
+  maxRoomCount: 15
+  maxBranchDepth: 2
+  keepSpecialRoomsOffCriticalPath: 1
+  mergeChance: 0.513
+  gridCellSize: {x: 38.0928, y: 22.7328}
+  corridorTileSize: {x: 7.3728, y: 3.6864}
+  fillBackground: 1
+  backgroundTile: {fileID: 11400000, guid: 00b1867414a058f4d92b3a953717f499, type: 2}
+  backgroundTileSize: {x: 15.36, y: 15.36}
+  backgroundPadding: 10
+  backgroundSortingOrder: -100
+  useRandomSeed: 1
+  seed: 0

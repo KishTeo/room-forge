@@ -21,3 +21,48 @@
 *.opendb
 *.VC.db
 .DS_Store
+
+# Personal dev scratch log — not part of the plugin or its docs.
+/SESSION_NOTES.md
+
+# Personal / third-party assets — not part of the RoomForge package.
+# Kept locally (e.g. for demo recordings) but never committed.
+/Assets/Brackeys/
+/Assets/Brackeys.meta
+/Assets/SPUM/
+/Assets/SPUM.meta
+/Assets/Sandbox/
+/Assets/Sandbox.meta
+/Assets/Example/
+/Assets/Example.meta
+
+# Dev test scene — wired to Sandbox/SPUM/Brackeys components above, would ship
+# with missing-script references once those are excluded. No shipped demo scene;
+# README documents the minimal setup instead.
+/Assets/Scenes/SampleScene.unity
+/Assets/Scenes/SampleScene.unity.meta
+
+# RoomForge dev-only tests — not shipped to package users.
+/Assets/RoomForge/Tests/
+/Assets/RoomForge/Tests.meta
+
+# Legacy placeholder room/corridor prefabs — depend on Assets/Brackeys sprites,
+# superseded by the Space-themed set, unused by the shipped DungeonConfigSO.
+/Assets/RoomForge/Prefabs/Rooms/Room 1.prefab
+/Assets/RoomForge/Prefabs/Rooms/Room 1.prefab.meta
+/Assets/RoomForge/Prefabs/Rooms/NormalRoom.prefab
+/Assets/RoomForge/Prefabs/Rooms/NormalRoom.prefab.meta
+/Assets/RoomForge/Prefabs/Rooms/EndRoom.prefab
+/Assets/RoomForge/Prefabs/Rooms/EndRoom.prefab.meta
+/Assets/RoomForge/Prefabs/Rooms/SpecialRoom.prefab
+/Assets/RoomForge/Prefabs/Rooms/SpecialRoom.prefab.meta
+/Assets/RoomForge/Prefabs/Rooms/StartRoom.prefab
+/Assets/RoomForge/Prefabs/Rooms/StartRoom.prefab.meta
+/Assets/RoomForge/Prefabs/Rooms/DungeonFrame1.prefab
+/Assets/RoomForge/Prefabs/Rooms/DungeonFrame1.prefab.meta
+/Assets/RoomForge/Prefabs/Rooms/NormalRoomAlt Variant.prefab
+/Assets/RoomForge/Prefabs/Rooms/NormalRoomAlt Variant.prefab.meta
+/Assets/RoomForge/Prefabs/Corridors/Corridor.prefab
+/Assets/RoomForge/Prefabs/Corridors/Corridor.prefab.meta
+/Assets/RoomForge/Prefabs/Corridors/Road.prefab
+/Assets/RoomForge/Prefabs/Corridors/Road.prefab.meta
